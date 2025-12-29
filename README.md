@@ -1,16 +1,20 @@
-# React + Vite
+# Web LLM Chat App (Client-Side)
+A minimal **client-side AI chat application** built using **React** and **@mlc-ai/web-llm**.  
+This project runs a **local LLM directly in the browser** — no backend, no API keys, no server.
+The model is downloaded and executed entirely on the client using WebGPU.
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- Fully **client-side LLM**
+- No backend or API key required
+- Runs locally in the browser
+- Simple chat interface
+- Uses `@mlc-ai/web-llm` with MLC compiled models
+---
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Model Used
+- **Llama-3.2-1B-Instruct (quantized)**
+- Loaded using:
+  ```js
+  CreateMLCEngine("Llama-3.2-1B-Instruct-q4f32_1-MLC")
+  ```
